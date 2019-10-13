@@ -4,7 +4,15 @@ A new Flutter application for CPR
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+An application made to help with CPR Emergencies
+List of features coming soon.
+
+![Alt text](screenshots/1.jpg?raw=true "Instructions for Adults")
+![Alt text](screenshots/2.jpg?raw=true "Instructions for Infants")
+![Alt text](screenshots/3.jpg?raw=true "Emergency Info")
+![Alt text](screenshots/4.jpg?raw=true "Emergency Info full")
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
