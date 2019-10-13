@@ -82,7 +82,6 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
                     ],
                   ),
                 ),
-
                 NavigateToHospital(),
                 EmergencyContactInfo(),
                 PersonalInfoCard(),

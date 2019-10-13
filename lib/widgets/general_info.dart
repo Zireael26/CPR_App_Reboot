@@ -25,7 +25,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
+      padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0, bottom: 8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -33,15 +33,15 @@ class _GeneralInfoState extends State<GeneralInfo> {
             widget.name,
             style: TextStyle(
               color: Colors.black,
-              fontSize: 22.0,
-              fontWeight: FontWeight.bold,
+              fontSize: 24.0,
+              fontWeight: FontWeight.w700,
             ),
           ),
           Container(height: 4.0),
           Text(
             "DOB: " + widget.dateOfBirth.toIso8601String(),
             style: TextStyle(
-              fontSize: 14.0,
+              fontSize: 16.0,
               color: Colors.black54,
               fontWeight: FontWeight.w500,
             ),
@@ -56,6 +56,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
                     style: TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.w500,
+                      fontSize: 16.0,
                     ),
                   )),
               Text(
@@ -63,6 +64,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
                 style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.w500,
+                  fontSize: 16.0,
                 ),
               ),
             ],
@@ -77,6 +79,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
                     style: TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.w500,
+                      fontSize: 16.0,
                     ),
                   )),
               Text(
@@ -84,6 +87,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
                 style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.w500,
+                  fontSize: 16.0,
                 ),
               ),
             ],

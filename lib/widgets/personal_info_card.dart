@@ -9,7 +9,7 @@ class PersonalInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
+      margin: EdgeInsets.only(top: 16.0, bottom: 16.0, left: 4.0, right: 4.0),
       elevation: 4.0,
       color: Colors.white,
       clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -25,12 +25,35 @@ class PersonalInfoCard extends StatelessWidget {
             weight: 87,
             height: 185,
           ),
-          Divider(),
-          MedicalConditions(),
-          Divider(),
-          MedicalNotes(),
-          Divider(),
-          Medications(),
+          Divider(
+            thickness: 1.0,
+          ),
+          MedicalConditions(
+            medConditions: <String>[
+              "Clinical Depresseion",
+              "Frequent Fractures",
+              "Prone to falling",
+            ],
+          ),
+          Divider(
+            thickness: 1.0,
+          ),
+          MedicalNotes(
+            medNotes: <String>[
+              "Will get angry if not fed on time",
+              "Allergic to penicillin",
+            ],
+          ),
+          Divider(
+            thickness: 1.0,
+          ),
+          Medications(
+            medications: <String>[
+              "Paracetamol",
+              "Rabiprojol",
+              "Adrenaline Syringe",
+            ],
+          ),
         ],
       ),
     );
