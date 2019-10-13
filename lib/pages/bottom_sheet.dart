@@ -1,5 +1,6 @@
 import 'package:cpr_app/widgets/emergency_contact_info.dart';
 import 'package:cpr_app/widgets/navigate_hospital_card.dart';
+import 'package:cpr_app/widgets/personal_info_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -84,6 +85,7 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
 
                 NavigateToHospital(),
                 EmergencyContactInfo(),
+                PersonalInfoCard(),
               ]),
             )
           ],
