@@ -1,6 +1,9 @@
+import 'package:cpr_app/widgets/emergency_contact_info.dart';
+import 'package:cpr_app/widgets/navigate_hospital_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PersistentBottomSheet extends StatefulWidget {
   @override
@@ -73,11 +76,14 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
                         ),
                         color: Theme.of(context).accentColor,
                         textColor: Colors.white,
-                        onPressed: () {},
+                        onPressed: () => launch("tel://102"),
                       )
                     ],
                   ),
                 ),
+
+                NavigateToHospital(),
+                EmergencyContactInfo(),
               ]),
             )
           ],

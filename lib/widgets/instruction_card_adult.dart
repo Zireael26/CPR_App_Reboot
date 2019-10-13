@@ -179,6 +179,12 @@ class InstructionCardAdult extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            height: MediaQuery
+                .of(context)
+                .size
+                .height / 12,
+          ),
         ],
       ),
     );
