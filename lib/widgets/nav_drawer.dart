@@ -7,6 +7,11 @@ class SideNavDrawer extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           ListTile(
+            leading: Icon(Icons.insert_drive_file),
+            title: Text("Instructions"),
+//            selected: true,
+          ),
+          ListTile(
             leading: Icon(Icons.edit),
             title: Text("Enter medical data"),
           ),

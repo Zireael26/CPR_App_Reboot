@@ -1,3 +1,4 @@
+import 'package:cpr_app/pages/bottom_sheet.dart';
 import 'package:cpr_app/widgets/instruction_card_adult.dart';
 import 'package:cpr_app/widgets/instruction_card_infant.dart';
 import 'package:cpr_app/widgets/nav_drawer.dart';
@@ -54,6 +55,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         drawer: SideNavDrawer(),
+        bottomSheet: PersistentBottomSheet(),
       ),
     );
   }

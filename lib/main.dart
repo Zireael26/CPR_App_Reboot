@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
         accentColor: Color.fromRGBO(255, 17, 64, 100.0),
+        backgroundColor: Color.fromRGBO(244, 244, 244, 100.0),
+//        backgroundColor: Colors.transparent,
       ),
       home: HomePage(),
     );
