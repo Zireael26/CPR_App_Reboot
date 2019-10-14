@@ -8,6 +8,8 @@ class EmergencyContactCard extends StatefulWidget {
 
   const EmergencyContactCard(this.contactName, this.contactNumber);
 
+  
+  
   @override
   _EmergencyContactCardState createState() {
     return _EmergencyContactCardState();
