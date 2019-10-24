@@ -12,9 +12,9 @@ class EmergencyContactInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.only(left: 16.0, top: 24.0),
             child: Text(
-              "EMERGENCY CONACTS",
+              "EMERGENCY CONTACTS",
               style: TextStyle(
                 fontSize: 12.0,
                 color: Colors.black54,
@@ -29,6 +29,7 @@ class EmergencyContactInfo extends StatelessWidget {
             endIndent: 16.0,
           ),
           EmergencyContactCard("Dad", "+91 9891460560"),
+          SizedBox(height: 16.0)
         ],
       ),
     );

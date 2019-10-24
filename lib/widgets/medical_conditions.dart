@@ -22,22 +22,19 @@ class _MedicalConditionsState extends State<MedicalConditions> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(
-              top: 16.0, left: 16.0, right: 16.0, bottom: 8.0),
+              top: 12.0, left: 16.0, right: 16.0, bottom: 8.0),
           child: Text(
             "MEDICAL CONDITIONS",
-            style: TextStyle(
-              fontSize: 12.0,
-              color: Colors.black54,
-              letterSpacing: 4.0,
-            ),
+            style: Theme.of(context).textTheme.caption,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(
-              left: 16.0, right: 16.0, top: 8.0),
+          padding: const EdgeInsets.only(left: 16.0, right: 16.0),
           child: Text(
             conditions,
-            style: TextStyle(fontSize: 16.0,),
+            style: TextStyle(
+              fontSize: 16.0,
+            ),
           ),
         ),
       ],

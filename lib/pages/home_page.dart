@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("CPR Instructions"),
+          primary: false,
           bottom: TabBar(
             indicatorWeight: 4.0,
             indicatorSize: TabBarIndicatorSize.label,

@@ -46,7 +46,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
               fontWeight: FontWeight.w500,
             ),
           ),
-          Container(height: 8.0),
+          Container(height: 16.0),
           Row(
             children: <Widget>[
               Container(
