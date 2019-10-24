@@ -16,9 +16,9 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
       expand: false,
-      minChildSize: 0.10,
-      maxChildSize: 0.90,
-      initialChildSize: 0.10,
+      minChildSize: 0.15,
+      maxChildSize: 1.0,
+      initialChildSize: 0.15,
       builder: (BuildContext context, ScrollController scrollController) {
         return CustomScrollView(
           controller: scrollController,
@@ -67,9 +67,10 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16.0)),
                         elevation: 0.0,
-                        padding: EdgeInsets.only(left: 32.0, right: 32.0),
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
                         child: Text(
                           "Contact Ambulance",
+                          overflow: TextOverflow.clip,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.0,

@@ -9,7 +9,7 @@ class NavigateToHospital extends StatelessWidget {
       child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-        elevation: 8.0,
+        elevation: 12.0,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Row(

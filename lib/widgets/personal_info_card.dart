@@ -10,13 +10,16 @@ class PersonalInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.only(top: 16.0, bottom: 16.0, left: 4.0, right: 4.0),
-      elevation: 4.0,
+      elevation: 5.0,
       color: Colors.white,
-      clipBehavior: Clip.antiAliasWithSaveLayer,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+      clipBehavior: Clip.antiAlias,
+//      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          SizedBox(
+            height: 16.0,
+          ),
           GeneralInfo(
             name: "Abhishek Kaushik",
             dateOfBirth: DateTime.parse("1998-01-26"),
@@ -25,6 +28,7 @@ class PersonalInfoCard extends StatelessWidget {
             weight: 87,
             height: 185,
           ),
+          SizedBox(height: 8.0),
           Divider(
             thickness: 1.0,
           ),
