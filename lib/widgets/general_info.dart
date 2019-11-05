@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 
 class GeneralInfo extends StatefulWidget {
   final String name;
-  final DateTime dateOfBirth;
+  final String dateOfBirth;
   final String bloodGroup;
   final String sexType;
   final double weight;
@@ -39,7 +39,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
           ),
           Container(height: 4.0),
           Text(
-            "DOB: " + widget.dateOfBirth.toIso8601String(),
+            "DOB: " + widget.dateOfBirth,
             style: TextStyle(
               fontSize: 16.0,
               color: Colors.black54,

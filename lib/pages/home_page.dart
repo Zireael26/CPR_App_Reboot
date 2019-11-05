@@ -16,7 +16,13 @@ class _HomePageState extends State<HomePage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("CPR Instructions"),
+          brightness: Brightness.light,
+          title: Text(
+            "CPR Instructions",
+            style: TextStyle(color: Colors.black),
+          ),
+          iconTheme: Theme.of(context).iconTheme.copyWith(color: Colors.black),
+          backgroundColor: Colors.white,
           primary: true,
           bottom: TabBar(
             indicatorWeight: 4.0,
