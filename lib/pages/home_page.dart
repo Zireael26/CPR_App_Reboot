@@ -3,13 +3,21 @@ import 'package:cpr_app/widgets/instruction_card_adult.dart';
 import 'package:cpr_app/widgets/instruction_card_infant.dart';
 import 'package:cpr_app/widgets/nav_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sms/flutter_sms.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageState createState() {
+    return _HomePageState();
+  }
 }
 
 class _HomePageState extends State<HomePage> {
+  List<double> _accelerometerValues;
+  List<double> _userAccelerometerValues;
+  List<double> _gyroscopeValues;
+
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -65,5 +73,14 @@ class _HomePageState extends State<HomePage> {
         bottomSheet: PersistentBottomSheet(),
       ),
     );
+  }
+
+  void _sendSMS(String message, List<String> recipients) async {
+    String _result = await FlutterSms
+        .sendSMS(message: message, recipients: recipients)
+        .catchError((onError) {
+      print(onError);
+    });
+    print(_result);
   }
 }

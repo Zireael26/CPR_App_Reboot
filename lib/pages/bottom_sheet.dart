@@ -6,6 +6,7 @@ import 'package:cpr_app/widgets/personal_info_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter_sms/flutter_sms.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,13 +16,22 @@ class PersistentBottomSheet extends StatefulWidget {
 }
 
 class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
+  void _sendSMS(String message, List<String> recipents) async {
+    String _result = await FlutterSms
+        .sendSMS(message: message, recipients: recipents)
+        .catchError((onError) {
+      print(onError);
+    });
+    print(_result);
+  }
+
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
       expand: false,
-      minChildSize: 0.15,
+      minChildSize: 0.10,
       maxChildSize: 1.0,
-      initialChildSize: 0.15,
+      initialChildSize: 0.10,
       builder: (BuildContext context, ScrollController scrollController) {
         return Consumer(
           builder: (BuildContext context, AppDataProvider model, _) {
@@ -92,27 +102,27 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
                       NavigateToHospital(),
                       !model.userIsInitialised
                           ? Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 40,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Text(
+                            "Please add medical information",
+                            style: Theme.of(context).textTheme.title,
+                          ),
+                          RaisedButton(
+                            child: Text("Add Information"),
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      EditMedicalInformationPage(),
                                 ),
-                                Text(
-                                  "Please add medical information",
-                                  style: Theme.of(context).textTheme.title,
-                                ),
-                                RaisedButton(
-                                  child: Text("Add Information"),
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            EditMedicalInformationPage(),
-                                      ),
-                                    );
-                                  },
-                                )
-                              ],
-                            )
+                              );
+                            },
+                          )
+                        ],
+                      )
                           : Container(),
                       model.userIsInitialised
                           ? EmergencyContactInfo()
@@ -120,6 +130,35 @@ class _PersistentBottomSheetState extends State<PersistentBottomSheet> {
                       model.userIsInitialised
                           ? PersonalInfoCard()
                           : Container(),
+
+
+                      MaterialButton(
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0)),
+                        elevation: 0.0,
+                        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: Text(
+                          "Emulate Fall",
+                          overflow: TextOverflow.clip,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        color: Theme
+                            .of(context)
+                            .accentColor,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          String message = "This is a test message!";
+                          List<String> recipents = [model.user.cnt1Phone];
+                          _sendSMS(message, recipents);
+
+//                          recipents = [model.user.cnt2Phone];
+//                          _sendSMS(message, recipents);
+                        },
+                      )
                     ],
                   ),
                 ),

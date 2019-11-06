@@ -126,7 +126,7 @@ class _EditMedicalInformationPageFormState
                       Expanded(
                         child: DropdownButtonFormField<String>(
                           hint: Text("Select Gender"),
-                          isDense: true,
+//                          isDense: true,
                           items: <String>["Male", "Female", "Other"]
                               .map((String value) {
                             return DropdownMenuItem<String>(
@@ -163,7 +163,7 @@ class _EditMedicalInformationPageFormState
                       Expanded(
                         child: DropdownButtonFormField<String>(
                           hint: Text("Select Blood Type"),
-                          isDense: true,
+//                          isDense: true,
                           items: <String>[
                             "A+ve",
                             "A-ve",
