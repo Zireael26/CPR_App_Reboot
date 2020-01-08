@@ -7,8 +7,10 @@ A new Flutter application for CPR
 An application made to help with CPR Emergencies
 List of features coming soon.
 
-<img src="screenshots/1.jpg" width = "400">   <img src="screenshots/2.jpg" width = "400">
-<img src="screenshots/3.jpg" width = "400">   <img src="screenshots/4.jpg" width = "400">
+<img src="screenshots/1.jpg" width = "400">      <img src="screenshots/2.jpg" width = "400">
+
+
+<img src="screenshots/3.jpg" width = "400">      <img src="screenshots/4.jpg" width = "400">
 
 
 A few resources to get you started if this is your first Flutter project:
