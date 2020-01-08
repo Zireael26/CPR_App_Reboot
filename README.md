@@ -7,6 +7,7 @@ A new Flutter application for CPR
 An application made to help with CPR Emergencies
 List of features coming soon.
 
+<img src="screenshots/1.jpg" width = "400">
 ![Alt text](screenshots/1.jpg?raw=true "Instructions for Adults" width = "400")
 ![Alt text](screenshots/2.jpg?raw=true "Instructions for Infants" width = "400")
 ![Alt text](screenshots/3.jpg?raw=true "Emergency Info" width = "400")
